@@ -1,0 +1,21 @@
+.passHints {
+	display: flex;
+	padding: 2rem 0 0;
+	align-items: center;
+	justify-content: flex-end;
+
+	span {
+		font-size: 1rem;
+		color: #777;
+		text-align: center;
+		margin-left: .4rem;
+		padding: .2rem .6rem;
+		background: transparent;
+		border: 1px solid #ddd;
+
+		&:first-child { margin-left: 0; }
+
+		&.isError { border-color: #ff5722; color: #ff5722; }
+		&.isValid { background-color: #e7f4f2; color: #14958f; border-color: #14958f; }
+	}
+}

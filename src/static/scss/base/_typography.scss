@@ -1,0 +1,39 @@
+body {
+	font-family: $font-family-primary;
+	font-size: $font-size-default;
+	font-weight: $font-normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-family-primary;
+	margin: 0 0 2rem;
+	color: $color-black;
+	font-weight: $font-normal;
+	line-height: $line-height-default;
+
+	&.white { color: $color-white; }
+
+	&.capitalize { text-transform: capitalize; }
+}
+
+p {
+	font-family: $font-family-primary;
+	font-size: $font-size-default;
+	color: #525252;
+	margin-bottom: 2rem;
+	line-height: $line-height-default;
+
+	&.white { color: $color-white; }
+
+	&.small { font-size: $font-size-small;}
+	&.medium { font-size: $font-size-medium;}
+	&.big { font-size: $font-size-big;}
+
+	&.light { font-weight: $font-light; }
+	&.semi { font-weight: $font-semi; }
+	&.bold { font-weight: $font-bold; }
+}
+
+ul {
+	margin: 0;
+}

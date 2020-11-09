@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import 'abstracts/variables';
+@import 'abstracts/mixin';
+@import 'abstracts/functions';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/helper';
+@import 'base/utilities';
+@import 'base/typography';
+
+@import 'components/spinner';
+
+@import 'layouts/header';
+
+@import 'pages/home';
+

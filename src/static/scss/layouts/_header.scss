@@ -1,0 +1,82 @@
+.headerMain {
+	position: relative;
+
+	&__grid {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__top {
+		background: $color-primary;
+		padding: 1.5rem 2rem;
+		color: $color-white;
+		font-size: $font-size-big;
+	}
+
+	&__logo {
+		font-size: 2.4rem;
+	}
+
+	&__bottom {
+		padding: 2rem;
+		background: #fafbfc;
+
+		.appRepoName {
+			display: flex;
+			font-size: 1.8rem;
+			align-items: center;
+
+			i {
+				margin-right: 1rem;
+			}
+			span {
+				padding: 0 .5rem;
+
+				&.color {
+					padding: 0;
+					color: $color-secondary;
+				}
+				&.bold {
+					font-weight: 600;
+				}
+			}
+		}
+
+		.actionButtons {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			button {
+				display: flex;
+				padding: 0;
+				margin-left: 1rem;
+				background: none;
+				font-size: 1.2rem;
+				font-weight: 600;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				overflow: hidden;
+				cursor: pointer;
+
+				span {
+					display: block;
+					color: #777;
+					padding: .7rem 1.4rem;
+					
+					&.white {
+						background: white;
+						border-left: 1px solid #ddd;
+					}
+				}
+
+				&:hover {
+					border-color: #ccc;
+					span { color: #444; }
+				}
+			}
+		}
+
+	}
+}

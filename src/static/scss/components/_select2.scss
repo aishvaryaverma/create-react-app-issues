@@ -1,0 +1,31 @@
+.custom-ReactSelect {
+	font-family: "Optima LT Std Roman";
+	color: black;
+	border-bottom: 1px solid #d1d1d1;
+	.css-yk16xz-control {
+		border: none;
+		cursor: pointer;
+		padding: 5px 0 4px;
+		background: transparent;
+		.css-g1d714-ValueContainer {
+			padding: 0;	
+			.css-1wa3eu0-placeholder,
+			.css-1uccc91-singleValue {
+				margin: 0;
+			}
+		}
+	}
+
+	.css-1padhxg-control {
+
+	}
+}
+
+#contactpopup {
+	.css-g1d714-ValueContainer {
+		.css-1wa3eu0-placeholder,
+		.css-1uccc91-singleValue {
+			color: rgba(white, 0.7);
+		}
+	}
+}

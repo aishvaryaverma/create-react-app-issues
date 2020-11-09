@@ -1,0 +1,14 @@
+.msrItems {
+	margin-left: -20px;
+	
+	.msrItem {
+		margin: 20px !important;
+		width: calc(50% - 40px) !important;
+		&:nth-child(1){
+			margin-top: 0 !important;
+		}
+		&:nth-child(2){
+			margin-top: 0 !important;
+		}
+	}
+}

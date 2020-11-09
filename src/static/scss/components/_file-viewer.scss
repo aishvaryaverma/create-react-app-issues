@@ -1,0 +1,166 @@
+
+
+.fileViewer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+	background: rgba(black, 0.8);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 60px;
+	
+	&__header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		// width: 100%;
+		color: white;
+		padding: 10px 15px;
+		background: rgba($color-primary, 0.94);
+
+		display: flex;
+		align-items: center;
+
+		.backButton { cursor: pointer; }
+		
+		.fileName {
+			display: flex;
+			margin-left: 20px;
+			align-items: center;
+
+			.d_name {
+				width: auto;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+
+				@media screen and (max-width: $mobile) {
+					width: 280px;
+				}
+				@media screen and (max-width: $mobile-small) {
+					width: 180px;
+				}
+				@media screen and (max-width: $mobile-extra-small) {
+					width: 150px;
+				}
+			}
+		}
+
+		.downloadIcon {
+			margin-left: auto;
+			margin-right: 10px;
+
+			a {
+				opacity: 0.7;
+				color: white;
+				
+				i {
+					font-size: 18px;
+				}
+				
+				&:hover { opacity: 1; }
+			}
+		}
+		svg { display: block; }
+	}
+
+	&__dialog {
+		width: 70%;
+		padding: 30px 0;
+		
+		// for Image
+		.viewImage {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			padding-bottom: 20px;
+			justify-content: center;
+			opacity: 0;
+			transition: all .4s ease-out;
+		
+			img {
+				display: block;
+				width: 100%;
+			}
+		
+			&.show {
+				opacity: 1;
+			}
+		}
+
+		// for Docx
+		.pg-viewer-wrapper {
+			overflow: auto;
+
+			.document-container {
+				width: auto;
+			}
+			.loading-container {
+				overflow: hidden;
+			}
+		}
+
+		// for PDF
+		.pdfViewer {
+			position: relative;
+
+			.pageCount {
+				position: fixed;
+				left: 50%;
+				z-index: 10;
+				bottom: 40px;
+				font-size: 14px;
+				color: white;
+				padding: 7px 20px;
+				transform: translateX(-50%);
+				background: rgba(black, 0.8);
+				display: none;
+			}
+
+			.pdfLoading {
+				color: white;
+			}
+
+			.react-pdf__Page {
+				margin-bottom: 20px;
+				
+				.react-pdf__Page__canvas {
+					margin: 0 auto;
+
+				}
+				&:last-child { margin-bottom: 0; }
+			}
+		}
+
+		@media screen and (max-width: $tablet) {
+			width: 90%;
+		}
+		@media screen and (max-width: $tablet) {
+			padding: 10px 0;
+
+			.pg-viewer-wrapper {
+				.document-container {
+					zoom: 0.6;
+					min-width: 800px;
+				}
+			}
+		}
+	}
+}
+
+.tooltip {
+	font-size: 16px;
+	margin-top: 20px;
+	margin-left: -20px;
+	margin-right: 20px;
+	word-break: break-all;
+	
+	&.show { opacity: 1;}
+}

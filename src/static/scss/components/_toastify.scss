@@ -1,0 +1,57 @@
+.Toastify {
+
+	&__toast {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		font-family: $font-family-primary;
+		min-height: 0;
+		padding: 1.5rem;
+		background: $color-white;
+		color: $color-headings;
+
+		box-shadow: $box-shadow-default;
+		border: 1px solid #f1f1f1;
+		border-left: 4px solid $color-tertiary;
+		border-bottom: none;
+		border-radius: .2rem;
+		
+		&-body {
+			font-size: 1.4rem;
+			color: #777;
+			margin: 0;
+			padding: .2rem 0;
+			font-weight: $font-semi;
+		}
+
+		&--info {
+			border-left-color: $color-tertiary;
+		}
+		&--success {
+			border-left-color: $color-green;
+		}
+		&--warning {
+			border-left-color: $color-yellow;
+		}
+		&--error {
+			// background: #fbeded;
+			border-left-color: $color-red;
+		}
+	}
+	
+	&__close {
+		&-button {
+			align-self: center;
+			color: $color-headings;
+		}
+	}
+
+	&__progress {
+		&-bar {
+			height: 3px;
+			// background: linear-gradient(to right, $color-primary, lighten($color-primary, 15%));
+			background: linear-gradient(90deg,#5ac8fa,#007aff,#34aadc,#5856d6);
+		}
+	}
+}
