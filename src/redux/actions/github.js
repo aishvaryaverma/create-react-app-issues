@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify';
-import { LOAD_ISSUES, UPDATE_ISSUES, UPDATE_WATCH, UPDATE_STAR, UPDATE_FORK } from '../types';
+import { LOAD_ISSUES, UPDATE_ISSUES } from '../types';
 // utils
 import axios from '../../utils/axios';
 
