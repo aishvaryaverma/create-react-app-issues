@@ -42,6 +42,28 @@ class Utils {
 		}
 		return Math.floor(seconds) + ' seconds';
 	}
+
+	getClock(hour, min) {
+		const hrdeg = 30 * hour;
+		const mindeg = .5 * min;
+	
+		return 360 - (hrdeg + mindeg)
+	}
+	
+	getClockAngle(hours, minutes) {
+		// using 12-hour OR 24-hour clock notation
+		hours = hours % 12;
+		
+		var hourMinPart = 0.5 * minutes, // 30 degrees per 60 minutes => 1/2 degree per 1 minute => 0.5 * minute
+			hourHourPart = 30 * hours, // 30 degrees per 1 hour => 30 * hour
+			minAngle = 6 * minutes, // 360 degrees per 60 minutes => 6 degrees per 1 minute => 6 * minute
+			totalAngle = Math.abs(hourMinPart + hourHourPart - minAngle); // absolute difference
+		
+		console.log(totalAngle)
+		// subtract the total angle from 360 to get the portion w/ 12
+		return 360 - totalAngle;
+	}
+	
 }
 
 export default new Utils()
